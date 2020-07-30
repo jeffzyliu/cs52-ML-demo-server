@@ -4,6 +4,7 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
+    "preinstall": "node gcpsetup.js",
     "build": "babel server.js -d dist",
     "prod": "yarn build; node dist/server.js",
     "dev": "nodemon server.js --exec babel-node",
