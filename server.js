@@ -46,6 +46,7 @@ app.get('/', async (req, res) => {
 app.post('/api', async (req, res) => {
   try {
     const { uri } = req.body;
+    console.log(req.body);
     const results = await testVision(uri);
     const cleanedResults = results.map((label) => { return label.description; });
     res.json(cleanedResults);
