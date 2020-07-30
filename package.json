@@ -6,7 +6,7 @@
   "scripts": {
     "preinstall": "node gcpsetup.js",
     "build": "babel server.js -d dist",
-    "prod": "yarn build; node dist/server.js",
+    "start": "yarn build; node dist/server.js",
     "dev": "nodemon server.js --exec babel-node",
     "clean": "rm -rf dist"
   },
